@@ -1,19 +1,12 @@
 #!/usr/bin/python3
-# function that prints My name is <first name> <last name>
-"""
-    Define 'say_my_name'  function.
-"""
+"""print square function"""
 
 
-def say_my_name(first_name, last_name=""):
-    """
-        Print a name.
-        Args:
-            first_name (str): first name to print.
-            last_name (str): last name to print.
-    """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
-    print("My name is {} {}".format(first_name, last_name))
+def print_square(size):
+    """prints a square with "#" size."""
+    if type(size) is not int:
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
+    if size > 0:
+        print(("#" * size + "\n") * size, end="")
